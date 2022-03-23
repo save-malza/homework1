@@ -1,0 +1,22 @@
+@charset "EUC-KR";
+ body{ text-align: center;}
+        #container{
+           width:600px;
+           margin:0 auto; }
+       ul {list-style:none;} 
+       .field {
+           float:left;
+           font-weight: 540;
+           text-align:left;
+           margin-right:-150px;
+           margin-left:50px;
+          
+       }
+       
+       #buttons > li { display:inline-block;}
+       #buttons{text-align: center; width:550px;}
+       button {
+           float:left;
+           width:60px;
+           height:23px;
+           margin-right:10px;}

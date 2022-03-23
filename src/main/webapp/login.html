@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		 $('#submit').click(function(){
+			 var id = $("#userid").val();
+			 var pw = $("#pw").val();
+			 //requestparameter값을 만들어서 보내줘야함 
+			 //"myname"+$(".user").val();
+			$.ajax({
+				type:"POST",
+				url:"/login", 
+				data:id,pw, 
+				error:function(){
+					alert("실패")
+				},
+				success:function(data){ //2. 리턴받는다  data = ex01.jsp
+				alert("login ok") 
+				 
+				}
+				
+				
+				});
+		 	});
+			
+		});
+	</script>
+</head>
+<body>
+	 <div id="container">
+        <form id="login">
+            <h1>로그인</h1>
+            <hr>
+            <ul id="user=info">
+                <li>
+                    <label class="field">아이디  </label>
+                    <input type="text" id="userid">
+                </li>
+                <li>
+                    <label class="field">비밀번호  </label>
+                    <input type="password" id="pw" >
+                </li>
+            </ul>
+           
+            <ul id="buttons">
+                <li>
+                    <button type="submit" onclick="checkid()" >로그인</button>
+                </li>
+                <li>
+                    <button type="button">취&nbsp;&nbsp;&nbsp;소</button>
+                </li>
+            </ul>
+        </form>
+	
+
+</body>
+</body>
+</html>
